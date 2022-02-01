@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Context from './Context';
 import PlanetsAPI from '../data/PlanetsAPI';
 
-const InfosProvider = ({ children }) => {
+const Provider = ({ children }) => {
   const [data, insertData] = useState([]);
   const [filterByName, useNameFilter] = useState({
     name: '',
@@ -31,10 +31,10 @@ const InfosProvider = ({ children }) => {
     useNameFilter({ name: event.target.value });
   };
 
-  const handleChange = (event) => { // a funcao handlechange
-    filterValues({ // vai setar o filter
-      ...filter, // como o valor que já era
-      [e.target.name]: event.target.value, // e alterar o que estamos lidando seja column, comparion ou value (tem de colocar a tag name no elemento do forms)
+  const handleChange = (event) => {
+    filterValues({
+      ...filter,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -64,8 +64,8 @@ const InfosProvider = ({ children }) => {
   );
 };
 
-InfosProvider.propTypes = {
+Provider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default InfosProvider;
+export default Provider;

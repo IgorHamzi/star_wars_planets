@@ -1,17 +1,16 @@
 import React, { useContext } from 'react';
 import Context from '../context/Context';
-
 import Table from './Table';
-import TableNumberFilter from './TableFilterNumber';
+import TableFilterNumber from './TableFilterNumber';
 
-const TableDecider = () => {
+const TableFilter = () => {
   const { filterByNumber } = useContext(Context);
   return (
     <div>
       {filterByNumber.filterByNumericValues.length === 0 ? <Table />
-        : <TableNumberFilter />}
+        : <TableFilterNumber />}
     </div>
   );
 };
 
-export default TableDecider;
+export default TableFilter;

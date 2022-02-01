@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import Context from '../context/Context';
 
-const TableNumberFilter = () => {
+const TableFilterNumber = () => {
   const { data, filterByNumber, opts, setOpts } = useContext(Context);
   const colmunStr = filterByNumber.filterByNumericValues[0].column;
   const valueStr = filterByNumber.filterByNumericValues[0].value;
@@ -114,4 +114,4 @@ const TableNumberFilter = () => {
   );
 };
 
-export default TableNumberFilter;
+export default TableFilterNumber;
