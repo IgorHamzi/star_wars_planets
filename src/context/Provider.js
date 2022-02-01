@@ -1,23 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { PropTypes } from 'prop-types';
-import PlanetsAPI from '../data/PlanetsAPI';
+import PropTypes from 'prop-types';
 import Context from './Context';
+import PlanetsAPI from '../data/PlanetsAPI';
 
-function Provider(props) {
-  const [data, setData] = useState([]);
+const InfosProvider = ({ children }) => {
+  const [data, insertData] = useState([]);
+  const [filterByName, useNameFilter] = useState({
+    name: '',
+  });
+
+  const useInputFilterName = (event) => {
+    useNameFilter({ name: event.target.value });
+  };
+
   useEffect(() => {
-    PlanetsAPI().then((planets) => setData(planets));
+    PlanetsAPI()
+      .then((datas) => {
+        insertData(datas.results);
+      });
   }, []);
-  const { children } = props;
+
   return (
-    <Context.Provider value={ { data } }>
+    <Context.Provider value={ { data, filterByName, useInputFilterName } }>
       {children}
     </Context.Provider>
   );
-}
-
-Provider.propTypes = {
-  children: PropTypes.string.isRequired,
 };
 
-export default Provider;
+InfosProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default InfosProvider;
