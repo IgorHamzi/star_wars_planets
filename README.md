@@ -1,13 +1,27 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+## :information_source: Starwars Planets
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Nesse projeto foi desenvolvido uma aplicação que consulta uma API para recuperar dados dos planetas do universo de Star Wars.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+
+## :rocket: Stack utilizada
+
+* Front-end: React, Node, React Hooks, Context Api
+
+---
+
+## Habilidades desenvolvidas
+
+* Utilizar a Context API do React para gerenciar estado.
+* Utilizar o React Hook useState;
+* Utilizar o React Hook useContext;
+* Utilizar o React Hook useEffect;
+
+
+---
+
+## :link: O que foi desenvolvido
+
+Foi desenvolvido uma lista com filtros de planetas do universo de Star Wars usando Context API e Hooks para controlar os estados globais.
+
+
+### Projeto realizado no módulo de Front-end do Curso de Desenvolvimento WEB da TRYBE.
